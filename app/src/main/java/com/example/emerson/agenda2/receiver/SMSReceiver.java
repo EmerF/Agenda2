@@ -1,9 +1,11 @@
 package com.example.emerson.agenda2.receiver;
 
+import android.annotation.TargetApi;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.telephony.SmsMessage;
 import android.widget.Toast;
 
@@ -14,6 +16,7 @@ import com.example.emerson.agenda2.R;
  * Created by emerson on 04/07/16.
  */
 public class SMSReceiver extends BroadcastReceiver {
+    @TargetApi(Build.VERSION_CODES.M)
     @Override
     public void onReceive(Context context, Intent intent) {
         Object[] pdus = (Object[]) intent.getSerializableExtra("pdus");
