@@ -106,6 +106,15 @@ public class AlunoDAO extends SQLiteOpenHelper {
 
     }
 
+    public boolean ehAluno(String telefone) {
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c = db.rawQuery("Select * From Alunos Where telefone = ?", new String[]{telefone});
+        int resultados = c.getCount();
+        c.close();
+        return resultados >0;
+
+    }
+
     /*private ContentValues montaContentValues(){
         Usar array de fields para pegar o nome do campo e concatenar com seu valor
         e retornar o content field pronto
