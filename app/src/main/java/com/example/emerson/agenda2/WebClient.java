@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class WebClient {
     public String post(String json){
         try {
-            URL url = new URL("https:// www.caelum.com.br/mobile");
+            URL url = new URL("https://www.caelum.com.br/mobile");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestProperty("Content-type","application/json");
             connection.setRequestProperty("Accept", "application/json");
