@@ -40,7 +40,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> lista, View item, int position, long id) {
                 Aluno aluno = (Aluno) lista.getItemAtPosition(position);
                 Intent intentVaiProFormulario = new Intent(ListaAlunosActivity.this, FormularioActivity.class);
-                intentVaiProFormulario.putExtra("Aluno", aluno);
+                intentVaiProFormulario.putExtra("Aluno", aluno); // passa valor como parametro
                 startActivity(intentVaiProFormulario);
 
             }
@@ -68,7 +68,7 @@ public class ListaAlunosActivity extends AppCompatActivity {
 
         //ArrayAdapter<Aluno> adapter = new ArrayAdapter<Aluno>(this,android.R.layout.simple_list_item_1,alunos);
         AlunosAdapter adapter = new AlunosAdapter(this, alunos);
-        listaAlunos.setAdapter(adapter);
+        listaAlunos.setAdapter(adapter);// seta o adapter criado...
     }
 
     @Override
